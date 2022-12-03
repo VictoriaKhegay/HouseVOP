@@ -1,0 +1,145 @@
+@use "sass:math";
+
+//@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+@import "colors.scss";
+@import "mixins.scss";
+
+@mixin back($value) {
+    background-color: $value;
+}
+
+@function toVw($target) {
+    $vw-context: (1920 * 0.01) * 1px;
+    @return math.div($target, $vw-context) * 1vw;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+body, html{
+    font-family: 'Raleway', sans-serif;
+    color: $c-white;
+}
+
+header{
+    background-image: url(../img/bg-image-main.jpg);
+    @include bg-default;
+}
+    .main-info{
+        width: toVw(1100px);
+        margin: auto;
+        &__mainmenu{
+            @include flex-between;
+            align-items: center;
+            &-logo{
+                padding-top: toVw(30px);
+                h2{
+                    font-size: toVw(26px);
+                    font-weight: 600;
+                    padding-bottom: toVw(8px);
+                }
+                h3{
+                    font-size: toVw(12px);
+                    letter-spacing: 0.10em;
+                }
+            }
+        &-menu{
+                @include flex-center();
+            ul{
+                @include flex-between;
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+                color: $c-white;
+                font-size: toVw(14px);
+                padding-left: toVw(40px) ;
+            }
+        }
+    }
+    &__slider{
+        &-name{
+        padding-top: toVw(296px);
+        font-weight: 700;
+        color: $c-gold;
+        text-align: center;
+        }
+        &-mouse{
+            padding-top: toVw(100px);
+            @include flex-center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            &::before{
+                content: '';
+                display: block;
+                width: toVw(2.4px);
+                height: toVw(8px);
+                background-image: url('../img/mouse-line.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                transition: .3s;
+                left: toVw(13px);
+                top: toVw(-8px);
+                //transform: rotateY(10px);
+            }
+            img{
+                width: toVw(23.53px);
+                height: toVw(40px);
+            }
+        }
+        &-contact{
+            display: flex;
+            justify-content: space-around;
+            padding-top: toVw(340px);
+            padding-bottom: toVw(74px);
+            position: relative;
+            p{
+                font-weight: 400;
+                font-size: toVw(18px);
+            }
+            &-location::before{
+                content: '';
+                display: block;
+                width: toVw(14.71px);
+                height: toVw(21px);
+                background-image: url('../img/location.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                //left: toVw(151px);
+                left: 14%;
+            }
+            &-telephone::before{
+                content: '';
+                display: block;
+                width: toVw(14.71px);
+                height: toVw(21px);
+                background-image: url('../img/phone-call.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                //left: toVw(731px);
+                left: 67%;
+            }
+        }
+    }   
+
+    
+}
+
+
+
+

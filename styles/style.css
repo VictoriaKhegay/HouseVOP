@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body, html {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+header {
+  background-image: url(../img/bg-image-main.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-info {
+  width: 57.2916666667vw;
+  margin: auto;
+}
+.main-info__mainmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-info__mainmenu-logo {
+  padding-top: 1.5625vw;
+}
+.main-info__mainmenu-logo h2 {
+  font-size: 1.3541666667vw;
+  font-weight: 600;
+  padding-bottom: 0.4166666667vw;
+}
+.main-info__mainmenu-logo h3 {
+  font-size: 0.625vw;
+  letter-spacing: 0.1em;
+}
+.main-info__mainmenu-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-info__mainmenu-menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.main-info__mainmenu-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7291666667vw;
+  padding-left: 2.0833333333vw;
+}
+.main-info__slider-name {
+  padding-top: 15.4166666667vw;
+  font-weight: 700;
+  color: #D4C17F;
+  text-align: center;
+}
+.main-info__slider-mouse {
+  padding-top: 5.2083333333vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-info__slider-mouse::before {
+  content: "";
+  display: block;
+  width: 0.125vw;
+  height: 0.4166666667vw;
+  background-image: url("../img/mouse-line.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.3s;
+  left: 0.6770833333vw;
+  top: -0.4166666667vw;
+}
+.main-info__slider-mouse img {
+  width: 1.2255208333vw;
+  height: 2.0833333333vw;
+}
+.main-info__slider-contact {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 17.7083333333vw;
+  padding-bottom: 3.8541666667vw;
+  position: relative;
+}
+.main-info__slider-contact p {
+  font-weight: 400;
+  font-size: 0.9375vw;
+}
+.main-info__slider-contact-location::before {
+  content: "";
+  display: block;
+  width: 0.7661458333vw;
+  height: 1.09375vw;
+  background-image: url("../img/location.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 14%;
+}
+.main-info__slider-contact-telephone::before {
+  content: "";
+  display: block;
+  width: 0.7661458333vw;
+  height: 1.09375vw;
+  background-image: url("../img/phone-call.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 67%;
+}/*# sourceMappingURL=style.css.map */
