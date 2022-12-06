@@ -1,3 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@-webkit-keyframes mouseroll {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(50%);
+  }
+  40% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+@keyframes mouseroll {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(50%);
+  }
+  40% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +40,7 @@ img {
 }
 
 body, html {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Playfair Display", sans-serif;
   color: #fff;
 }
 
@@ -32,14 +63,13 @@ header {
 .main-info__mainmenu-logo {
   padding-top: 1.5625vw;
 }
-.main-info__mainmenu-logo h2 {
-  font-size: 1.3541666667vw;
-  font-weight: 600;
-  padding-bottom: 0.4166666667vw;
+.main-info__mainmenu-logo img {
+  width: 6.9791666667vw;
+  height: 1.9270833333vw;
 }
-.main-info__mainmenu-logo h3 {
+.main-info__mainmenu-logo h4 {
   font-size: 0.625vw;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
 }
 .main-info__mainmenu-menu {
   display: flex;
@@ -51,7 +81,7 @@ header {
   justify-content: space-between;
   list-style: none;
 }
-.main-info__mainmenu-menu a {
+.main-info__mainmenu-menu ul a {
   text-decoration: none;
   color: #fff;
   font-size: 0.7291666667vw;
@@ -62,66 +92,360 @@ header {
   font-weight: 700;
   color: #D4C17F;
   text-align: center;
+  font-family: "Playfair Display";
+  padding-bottom: 5.2083333333vw;
 }
 .main-info__slider-mouse {
-  padding-top: 5.2083333333vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
+  width: 1.2255208333vw;
+  height: 2.0833333333vw;
+  border-radius: 2.6041666667vw;
+  border: 0.0520833333vw solid #D4C17F;
   left: 50%;
   transform: translateX(-50%);
 }
-.main-info__slider-mouse::before {
-  content: "";
+.main-info__slider-mouse span {
   display: block;
   width: 0.125vw;
-  height: 0.4166666667vw;
-  background-image: url("../img/mouse-line.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  transition: 0.3s;
-  left: 0.6770833333vw;
-  top: -0.4166666667vw;
-}
-.main-info__slider-mouse img {
-  width: 1.2255208333vw;
-  height: 2.0833333333vw;
+  height: 0.375vw;
+  background-color: #D4C17F;
+  position: absolute;
+  left: 48%;
+  transform: translateX(-50%);
+  top: 0.2604166667vw;
+  -webkit-animation: mouseroll 1.5s infinite;
+          animation: mouseroll 1.5s infinite;
 }
 .main-info__slider-contact {
   display: flex;
   justify-content: space-around;
-  padding-top: 17.7083333333vw;
+  padding-top: 10.4166666667vw;
   padding-bottom: 3.8541666667vw;
+}
+.main-info__slider-contact a {
+  font-family: "Raleway";
+  font-size: 0.9375vw;
+  text-decoration: none;
+  color: #fff;
+}
+.main-info__slider-contact-location {
+  display: flex;
+}
+.main-info__slider-contact-location img {
+  width: 0.7661458333vw;
+  height: 1.09375vw;
+  margin-right: 0.9453125vw;
+}
+.main-info__slider-contact-telephone {
+  display: flex;
+}
+.main-info__slider-contact-telephone img {
+  width: 1.09375vw;
+  height: 1.09375vw;
+  margin-right: 0.9453125vw;
+}
+
+.testimonial {
+  background-image: url(../img/II-2.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #242B33;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding-top: 6.25vw;
+  width: 46.875vw;
+  padding-bottom: 6.25vw;
+}
+.testimonials-item {
+  display: flex;
+  flex-direction: column;
+}
+.testimonials-item img {
+  width: 4.1666666667vw;
+  height: 4.1666666667vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials-item p {
+  font-size: 1.0416666667vw;
+  text-align: center;
+  padding-top: 2.8645833333vw;
+}
+
+.question {
+  background-image: url(../img/bg-image.jpg);
+}
+.question .want {
+  width: 57.2916666667vw;
+  margin: auto;
+  display: flex;
+  padding-top: 9.375vw;
+  padding-bottom: 9.375vw;
+}
+.question .want-see {
+  width: 28.6458333333vw;
+  padding-right: 1.8229166667vw;
+}
+.question .want-see h3 {
+  color: #D4C17F;
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 1.875vw;
+}
+.question .want-see p {
+  font-size: 0.8333333333vw;
+  padding-top: 2.6041666667vw;
+}
+.question .want-input {
+  display: flex;
+  width: 28.125vw;
+  padding-top: 2.6041666667vw;
+}
+.question .want-input-info {
+  padding-right: 1.5625vw;
+}
+.question .want-input input {
+  width: 13.28125vw;
+  height: 2.6041666667vw;
+  background: #FFFFFF;
+  opacity: 0.2;
+}
+.question .want-input input::-moz-placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.question .want-input input:-ms-input-placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.question .want-input input::placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.question .want-input p {
+  font-size: 0.6770833333vw;
+  color: #E7E7E7;
+  text-align: center;
+  padding-top: 2.3958333333vw;
+}
+.question .want-input button {
+  width: 13.28125vw;
+  height: 2.6041666667vw;
+  color: #fff;
+  background-color: #D4C17F;
+  border: none;
+  font-size: 0.8333333333vw;
+  margin-top: 1.8229166667vw;
+  cursor: pointer;
+}
+.question .want-input button:hover {
+  color: #D4C17F;
+  background-color: #fff;
+  transition: 0.3s;
+  border-radius: 3px;
+  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+}
+
+.apartments {
+  background-image: url(../img/III.png);
+  background-repeat: no-repeat;
+  background-position: 200px 10px;
+  background-color: #242B33;
+}
+.apartments .apartment {
+  width: 62.5vw;
+  margin: auto;
+}
+.apartments .apartment-title {
+  padding-bottom: 5.2083333333vw;
+}
+.apartments .apartment-title h3 {
+  font-size: 1.875vw;
+  color: #D4C17F;
+  font-family: "Playfair Display";
+}
+.apartments .apartment-lofts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+.apartments .apartment-lofts img {
+  width: 26.0416666667vw;
+  height: 15.625vw;
+  position: relative;
+  padding-bottom: 1.5625vw;
+  padding-right: 0.78125vw;
+  padding-left: 0.78125vw;
+  opacity: 0.6;
+}
+.apartments .apartment-lofts img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  opacity: 1;
+  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+}
+.apartments .apartment-lofts p {
+  font-size: 1.25vw;
+  text-align: left;
+  padding-left: 3.6458333333vw;
+  position: relative;
+  bottom: 4.1666666667vw;
+}
+
+.videos {
+  background-image: url(../img/IV.png);
+  background-repeat: no-repeat;
+  background-position: 81% 50%;
+  background-color: #242B33;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+.video-image img {
+  height: 37.4479166667vw;
+  width: 33.8541666667vw;
   position: relative;
 }
-.main-info__slider-contact p {
-  font-weight: 400;
-  font-size: 0.9375vw;
-}
-.main-info__slider-contact-location::before {
-  content: "";
-  display: block;
-  width: 0.7661458333vw;
-  height: 1.09375vw;
-  background-image: url("../img/location.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.video-play {
+  height: 5.2083333333vw;
+  width: 5.2083333333vw;
   position: absolute;
-  left: 14%;
+  padding-top: 250px;
+  cursor: pointer;
 }
-.main-info__slider-contact-telephone::before {
-  content: "";
-  display: block;
-  width: 0.7661458333vw;
-  height: 1.09375vw;
-  background-image: url("../img/phone-call.svg");
-  background-position: center;
+
+.maps {
+  background-image: url(../img/V.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 67%;
+  background-position: 12% 23%;
+  background-color: #242B33;
+}
+.maps .map {
+  display: flex;
+  flex-direction: column;
+  width: 62.5vw;
+  margin: auto;
+  padding-top: 9.375vw;
+}
+.maps .map-title h3 {
+  font-size: 1.875vw;
+  color: #D4C17F;
+  font-family: "Playfair Display";
+  padding-bottom: 5.2083333333vw;
+}
+.maps .map-questions-question h3 {
+  font-size: 1.875vw;
+  color: #D4C17F;
+  font-family: "Playfair Display";
+  padding-top: 9.375vw;
+  padding-bottom: 3.1770833333vw;
+}
+.maps .map-input {
+  padding-bottom: 9.375vw;
+}
+.maps .map-input-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maps .map-input input {
+  width: 13.28125vw;
+  height: 2.6041666667vw;
+  background: #FFFFFF;
+  opacity: 0.2;
+}
+.maps .map-input input::-moz-placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.maps .map-input input:-ms-input-placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.maps .map-input input::placeholder {
+  color: #8a8989;
+  text-align: center;
+  font-family: "Raleway";
+}
+.maps .map-input p {
+  font-size: 0.6770833333vw;
+  color: #E7E7E7;
+  text-align: center;
+}
+.maps .map-input button {
+  width: 13.28125vw;
+  height: 2.6041666667vw;
+  color: #fff;
+  background-color: #D4C17F;
+  border: none;
+  font-size: 0.8333333333vw;
+  cursor: pointer;
+}
+.maps .map-input button:hover {
+  color: #D4C17F;
+  background-color: #fff;
+  transition: 0.3s;
+  border-radius: 3px;
+  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+}
+
+footer {
+  background-color: #2D343C;
+}
+footer .footer {
+  width: 62.5vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3.125vw;
+  padding-bottom: 3.125vw;
+}
+footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  padding-right: 8.6458333333vw;
+}
+footer .footer-logo img {
+  width: 6.9791666667vw;
+  height: 1.9270833333vw;
+}
+footer .footer-logo h4 {
+  font-size: 0.625vw;
+  letter-spacing: 0.09em;
+}
+footer .footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 8.6458333333vw;
+}
+footer .footer-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+}
+footer .footer-menu ul a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7291666667vw;
+  padding-bottom: 0.78125vw;
+}
+footer .footer-info a, footer .footer-info p {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.7291666667vw;
+  padding-bottom: 0.78125vw;
 }/*# sourceMappingURL=style.css.map */
