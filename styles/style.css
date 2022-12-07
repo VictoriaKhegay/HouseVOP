@@ -110,11 +110,13 @@ header {
   height: 0.375vw;
   background-color: #D4C17F;
   position: absolute;
-  left: 48%;
+  left: 49%;
   transform: translateX(-50%);
   top: 0.2604166667vw;
-  -webkit-animation: mouseroll 1.5s infinite;
-          animation: mouseroll 1.5s infinite;
+  -webkit-animation: mouseroll 1.7s infinite;
+          animation: mouseroll 1.7s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 .main-info__slider-contact {
   display: flex;
@@ -148,7 +150,7 @@ header {
 .testimonial {
   background-image: url(../img/II-2.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 90% 50%;
   background-color: #242B33;
 }
 
@@ -247,17 +249,15 @@ header {
   cursor: pointer;
 }
 .question .want-input button:hover {
-  color: #D4C17F;
-  background-color: #fff;
   transition: 0.3s;
   border-radius: 3px;
-  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+  box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
 }
 
 .apartments {
   background-image: url(../img/III.png);
   background-repeat: no-repeat;
-  background-position: 200px 10px;
+  background-position: 180px 10px;
   background-color: #242B33;
 }
 .apartments .apartment {
@@ -291,7 +291,7 @@ header {
   transform: scale(1.1);
   transition: 0.5s;
   opacity: 1;
-  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+  box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
 }
 .apartments .apartment-lofts p {
   font-size: 1.25vw;
@@ -395,11 +395,9 @@ header {
   cursor: pointer;
 }
 .maps .map-input button:hover {
-  color: #D4C17F;
-  background-color: #fff;
   transition: 0.3s;
   border-radius: 3px;
-  box-shadow: -5px -5px 15px 5px #D4C17F, 5px 5px 15px 7px #D4C17F;
+  box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
 }
 
 footer {
@@ -448,4 +446,193 @@ footer .footer-info a, footer .footer-info p {
   color: #fff;
   font-size: 0.7291666667vw;
   padding-bottom: 0.78125vw;
+}
+footer .footer-info .footer-info-email {
+  color: #D4C17F;
+}
+footer .footer .footer-info-media {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .footer-info-media img {
+  height: 1.0416666667vw;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  .main-info {
+    width: auto;
+  }
+  .main-info__mainmenu {
+    display: flex;
+    justify-content: center;
+  }
+  .main-info__mainmenu-logo img {
+    width: 150px;
+    height: 50px;
+  }
+  .main-info__mainmenu-logo h4 {
+    font-size: 13px;
+  }
+  .main-info__mainmenu-menu ul {
+    display: none;
+  }
+  .main-info__slider-name {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .main-info__slider-mouse {
+    width: 15px;
+    height: 30px;
+  }
+  .main-info__slider-mouse span {
+    width: 2px;
+    height: 5px;
+  }
+  .main-info__slider-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .main-info__slider-contact img {
+    width: 15px;
+    height: 15px;
+  }
+  .main-info__slider-contact a {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials-item img {
+    width: 150px;
+    height: 100px;
+  }
+  .testimonials-item p {
+    font-size: 14px;
+    padding-bottom: 30px;
+  }
+  .apartments .apartment-title h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .apartments .apartment-lofts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .apartments .apartment-loft img {
+    width: 250px;
+    height: 180px;
+  }
+  .apartments .apartment-loft p {
+    font-size: 14px;
+  }
+  .question .want {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .question .want-see {
+    width: auto;
+  }
+  .question .want-see h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .question .want-see p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .question .want-input {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .question .want input {
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+  }
+  .question .want p {
+    display: none;
+  }
+  .question .want button {
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .videos .video-image img {
+    width: 250px;
+    height: 180px;
+  }
+  .videos .video-play {
+    padding-top: 60px;
+    position: absolute;
+  }
+  .videos .video-play img {
+    width: 50px;
+    height: 50px;
+  }
+  .maps .map-title h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .maps .map-link {
+    padding-top: 20px;
+  }
+  .maps .map-questions-question h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .maps .map-input-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .maps .map-input-info input {
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+  }
+  .maps .map-input-info p {
+    font-size: 12px;
+  }
+  .maps .map-input-info button {
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  footer .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-logo {
+    display: none;
+  }
+  footer .footer-menu ul {
+    display: none;
+  }
+  footer .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-info p, footer .footer-info a {
+    font-size: 12px;
+  }
+  footer .footer-info .footer-info-media img {
+    height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

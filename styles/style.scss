@@ -8,6 +8,7 @@
 @import "mixins.scss";
 @import "animation.scss";
 
+
 @mixin back($value) {
     background-color: $value;
 }
@@ -91,10 +92,11 @@ header{
                 height: toVw(7.2px);
                 background-color: $c-gold;
                 position: absolute;
-                left: 48%;
+                left: 49%;
                 transform: translateX(-50%);
                 top: toVw(5px);
-                animation: mouseroll 1.5s infinite;
+                animation: mouseroll 1.7s infinite;
+                animation-direction: alternate;
             }
         }
         &-contact{
@@ -130,7 +132,7 @@ header{
 .testimonial{
     background-image: url(../img/II-2.png);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 90% 50%;
     background-color: $c-bg-color;
 }
 .testimonials{
@@ -217,11 +219,11 @@ header{
                 cursor: pointer;
             }
             button:hover{
-                color: $c-gold;
-                background-color: $c-white;
+                //color: $c-gold;
+                //background-color: $c-white;
                 transition: 0.3s;
                 border-radius: 3px;
-                box-shadow: -5px -5px 15px 5px $c-gold, 5px 5px 15px 7px $c-gold;
+                box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
                 
             }
         }
@@ -230,7 +232,7 @@ header{
 .apartments{
     background-image: url(../img/III.png);
     background-repeat: no-repeat;
-    background-position: 200px 10px;
+    background-position: 180px 10px;
     background-color: $c-bg-color;
     .apartment{
         width: toVw(1200px);
@@ -261,7 +263,7 @@ header{
                     transform: scale(1.1);
                     transition: .5s;
                     opacity: 1;
-                    box-shadow: -5px -5px 15px 5px $c-gold, 5px 5px 15px 7px $c-gold;
+                    box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
                 }
                 p{
                     font-size: toVw(24px);
@@ -361,12 +363,11 @@ header{
                 cursor: pointer;
             }
             button:hover{
-                color: $c-gold;
-                background-color: $c-white;
+                //color: black;
+                //background-color: $c-white;
                 transition: 0.3s;
                 border-radius: 3px;
-                box-shadow: -5px -5px 15px 5px $c-gold, 5px 5px 15px 7px $c-gold;
-                
+                box-shadow: 6px 6px 10px 0px rgba(125, 133, 93, 0.4);
             }
         }
     }
@@ -419,10 +420,249 @@ footer{
                 font-size: toVw(14px);
                 padding-bottom: toVw(15px);
             } 
+            .footer-info-email{
+                color: $c-gold;
+            }
         }
+        .footer-info-media{
+            display: flex;
+            justify-content: space-between;
+            img{
+                height: toVw(20px);
+            }
+        }
+    }
 }
 
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 25px;
+    }
+    
+    .main-info{
+        width: auto;
+        &__mainmenu{
+            display: flex;
+            justify-content: center;
+            &-logo{
+                
+                img{
+                    width: 150px;
+                    height: 50px;
+                }
+                h4{
+                    font-size: 13px;
+                }
+            }
+            &-menu{
+                ul{
+                    display: none;
+                }
+            }
+        }
+            &__slider{
+                &-name{
+                    padding-top: 50px;
+                    padding-bottom: 30px;
+                }
+                &-mouse{
+                    
+                    width: 15px;
+                    height: 30px; 
+                    span{
+                        width: 2px;
+                        height: 5px;    
+                    }
+                    
+                }
+                &-contact{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 60px;
+                    img{
+                        width: 15px;
+                        height: 15px; 
+                    }
+                    a{
+                        font-size: 14px;
+                        padding-bottom: 10px;
+                    }
+                }    
+            }
+        }
+    .testimonials{
+        display: flex;
+        flex-direction: column;
+        &-item{
+            img{
+                width: 150px;
+                height: 100px;
+            }
+            p{
+                font-size: 14px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+    .apartments{
+        .apartment{
+            &-title{
+                h3{
+                    font-size: 20px;
+                    text-align: center;
+                
+                }
+            }
+            &-lofts{
+                display: flex;
+                align-items: center;
+                flex-direction: column    
+            }
+            &-loft{
+                img{
+                    width: 250px;
+                    height: 180px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+.question{
+    .want{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-see{
+            width: auto;
+            h3{
+                font-size: 20px;
+                text-align: center;
+            }
+            p{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        &-input{
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin-top: 20px;
+            width: 150px;
+            height: 30px;
+        }
+        p{
+            display: none;
+        }
+        button{
+            width: 150px;
+            height: 30px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
 }
+.videos{
+    .video{
+        &-image{
+            img{
+                width: 250px;
+                height: 180px;
+            }
+        }
+        &-play{
+            padding-top: 60px;
+            position: absolute;
+            
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+.maps{
+    .map{
+        &-title{
+            h3{
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        &-link{
+            padding-top: 20px;
+        }
+        &-questions{
+            &-question{
+                h3{
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        &-input{
+            &-info{
+                display: flex;
+                flex-direction: column;
+                input{
+                    margin-top: 20px;
+                    width: 150px;
+                    height: 30px;
+                }
+                p{
+                    font-size: 12px;
+                }
+                button{
+                    width: 150px;
+                    height: 30px;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+footer{
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-logo{
+            display: none;
+        }
+        &-menu{
+            ul{
+                display: none;
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p, a{
+                font-size: 12px;
+            }
+            .footer-info-media{
+                img{
+                    height: 25px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 10px;
+                }  
+            } 
+        }
+    }
+}
+}
+    
+
 
 
 

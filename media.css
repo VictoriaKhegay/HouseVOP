@@ -1,0 +1,18 @@
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  .main-info {
+    width: auto;
+  }
+  .main-info__mainmenu-logo img {
+    width: 150px;
+    height: 50px;
+  }
+  .main-info__mainmenu-logo h4 {
+    font-size: 15px;
+  }
+  .main-info__mainmenu-menu ul {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */

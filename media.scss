@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 25px;
+    }
+    .main-info{
+        width: auto;
+        &__mainmenu{
+            &-logo{
+                img{
+                    width: 150px;
+                    height: 50px;
+                }
+                h4{
+                    font-size: 15px;
+                }
+            }
+            &-menu{
+                ul{
+                    display: none;
+                }
+
+}
+    }
+}
+}
